@@ -2,15 +2,15 @@ module.exports = function toReadable (number) {
     if (number === 0) {
         return 'zero';
     }
-    const toTwenty = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 
+    let toTwenty = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 
                     'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
-    const tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+    let tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
   
-    const result = '';
+    let result = '';
   
-    const hundredsCount = Math.trunc(number / 100);
-    const tensCount = Math.trunc(number % 100 / 10);
-    const onesCount = number % 10;
+    let hundredsCount = Math.trunc(number / 100);
+    let tensCount = Math.trunc(number % 100 / 10);
+    let onesCount = number % 10;
   
     if (hundredsCount >= 1) {
         result = result + toTwenty[hundredsCount] + ' hundred';
